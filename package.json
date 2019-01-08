@@ -1,6 +1,6 @@
 {
   "name": "region-shortcut",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "region-shortcut",
   "keywords": [
     "react",
@@ -29,7 +29,7 @@
     "verbose": true
   },
   "dependencies": {
-    "region-core": "^0.6.0"
+    "region-core": "^0.6.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
@@ -46,7 +46,7 @@
     "eslint-plugin-jest": "^21.18.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
-    "husky": "^1.0.0-rc.13",
+    "husky": "^1.3.1",
     "jest": "^23.6.0",
     "jest-cli": "^23.6.0",
     "react": "^16.6.3"
