@@ -1,6 +1,6 @@
 {
   "name": "region-shortcut",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "region-shortcut",
   "keywords": [
     "react",
@@ -29,7 +29,7 @@
     "verbose": true
   },
   "dependencies": {
-    "region-core": "^0.6.1"
+    "region-core": "^0.6.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
