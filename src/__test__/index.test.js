@@ -1,4 +1,6 @@
-import { set, load, connect, connectWith } from '../index';
+import {
+  set, load, connect, connectWith, Region, Provider, getProvider, region,
+} from '../index';
 
 describe('exports', () => {
   test('exports', () => {
@@ -6,5 +8,9 @@ describe('exports', () => {
     expect(typeof load).toBe('function');
     expect(typeof connect).toBe('function');
     expect(typeof connectWith).toBe('function');
+    expect(typeof Region).toBe('function');
+    expect(typeof Provider).toBe('function');
+    expect(typeof getProvider).toBe('function');
+    expect(typeof region).toBe('object');
   });
 });
