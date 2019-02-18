@@ -1,9 +1,9 @@
 # region-shortcut
 
-[![version](https://img.shields.io/npm/v/redux-loadings.svg?style=flat-square)](http://npm.im/redux-loadings)
-[![npm downloads](https://img.shields.io/npm/dm/redux-loadings.svg?style=flat-square)](https://www.npmjs.com/package/redux-loadings)
-[![codecov](https://codecov.io/gh/dancerphil/redux-loadings/branch/develop/graph/badge.svg)](https://codecov.io/gh/dancerphil/redux-loadings)
-[![MIT License](https://img.shields.io/npm/l/redux-loadings.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+[![version](https://img.shields.io/npm/v/region-shortcut.svg?style=flat-square)](http://npm.im/region-shortcut)
+[![npm downloads](https://img.shields.io/npm/dm/region-shortcut.svg?style=flat-square)](https://www.npmjs.com/package/region-shortcut)
+[![codecov](https://codecov.io/gh/regionjs/region-shortcut/branch/develop/graph/badge.svg)](https://codecov.io/gh/regionjs/region-shortcut)
+[![MIT License](https://img.shields.io/npm/l/region-shortcut.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 
 A replacement tool of `redux` to handle sync & async action flow. Extremely simple API!
 
@@ -66,7 +66,7 @@ export default connectWith(['user', 'follower'], Display);
 
 ## Example
 
-[Online Example](https://dancerphil.github.io/redux-loadings/index.html)
+[Online Example](https://regionjs.github.io/region-core/)
 
 ```bash
 git clone https://github.com/regionjs/region-core.git
