@@ -7,7 +7,7 @@
 
 A replacement tool of `redux` to handle sync & async action flow. Extremely simple API!
 
-English | [中文](https://github.com/regionjs/region-core/blob/master/docs/README-zh_CN.md)
+[English](https://github.com/regionjs/region-core) | [中文](https://github.com/regionjs/region-core/blob/master/docs/README-zh_CN.md)
 
 | Package | Version | Docs | Description |
 | --- | --- | --- | --- |
@@ -17,44 +17,7 @@ English | [中文](https://github.com/regionjs/region-core/blob/master/docs/READ
 
 ## Get Started
 
-```bash
-npm i region-shortcut
-// or
-npm i region-core
-```
-
-Then create your Component
-
-```jsx harmony
-import { connectWith } from 'region-shortcut';
-import { fetchUser } from './fetch'; // somewhere with axios
-
-load('user', fetchUser);
-
-const Display = ({ user }) => <div>{user}</div>
-
-export default connectWith('user', Display);
-```
-
-or
-
-```jsx harmony
-import { connectWith } from 'region-shortcut';
-import { fetchUser, fetchFollower } from './fetch'; // somewhere with axios
-
-load('user', fetchUser);
-const handleClick = () => load('follower', fetchFollower);
-
-const Display = ({ loading, error, user, follower }) => (
-  <div>
-    {user}
-    {follower}
-    <Button loading={loading} onClick={handleClick} />
-  </div>
-);
-
-export default connectWith(['user', 'follower'], Display);
-```
+[Get Started](https://github.com/regionjs/region-core#get-started)
 
 ## Docs
 
@@ -77,19 +40,4 @@ npm start
 
 ## Contribute
 
-Region is Extremely easy to extend, fire a issue if you have some great idea.
-
-```javascript
-import { Region } from 'region-core';
-
-class MyRegion extends Region {
-  constructor(...args) {
-    super(...args);
-    this.someFunc = this.someFunc.bind(this); // in case you are not using class field
-  }
-
-  someFunc() {}
-}
-```
-
-As for pull request, make sure to add test for your code.
+[Contribute](https://github.com/regionjs/region-core#contribute)
