@@ -22,8 +22,8 @@ describe('exports', () => {
     const { Provider, region } = api;
     expect(typeof Provider).toBe('function');
     const {
-      set, load, connect, connectWith, useProps,
-      getLoading, getResults, getFetchTimes, getError,
+      set, load, connect, unstable_connect, connectWith, useProps,
+      getProps, getLoading, getResults, getFetchTimes, getError,
       private_actionTypes, private_getState, private_reducer, private_selectorFactory, private_setConfig,
       name, enableLog, expiredTime, strictLoading, setConfig,
       ...rest
@@ -31,8 +31,10 @@ describe('exports', () => {
     expect(typeof set).toBe('function');
     expect(typeof load).toBe('function');
     expect(typeof connect).toBe('function');
+    expect(typeof unstable_connect).toBe('function');
     expect(typeof connectWith).toBe('function');
     expect(typeof useProps).toBe('function');
+    expect(typeof getProps).toBe('function');
     expect(typeof getLoading).toBe('function');
     expect(typeof getResults).toBe('function');
     expect(typeof getFetchTimes).toBe('function');
