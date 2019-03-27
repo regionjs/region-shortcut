@@ -1,9 +1,18 @@
+import * as core from 'region-core';
 import * as api from '..';
 
 describe('exports', () => {
+  test('no ignored', () => {
+    Object.keys(core).forEach((key: string) => {
+      const apiMap: {[key: string]: any} = api;
+      expect(apiMap[key]).not.toBe(undefined);
+    });
+
+  });
+
   test('exports', () => {
     const {
-      set, load, connect, connectWith, useProps, Region, Provider, getProvider, region,
+      set, load, connect, connectWith, useProps, Region, provide, Provider, getProvider, region,
       ...rest
     } = api;
     expect(typeof set).toBe('function');
@@ -12,6 +21,7 @@ describe('exports', () => {
     expect(typeof connectWith).toBe('function');
     expect(typeof useProps).toBe('function');
     expect(typeof Region).toBe('function');
+    expect(typeof provide).toBe('function');
     expect(typeof Provider).toBe('function');
     expect(typeof getProvider).toBe('function');
     expect(typeof region).toBe('object');
@@ -22,18 +32,19 @@ describe('exports', () => {
     const { Provider, region } = api;
     expect(typeof Provider).toBe('function');
     const {
-      reset, set, setFp, load, loadFp, connect, unstable_connect, connectWith, useProps, getProps,
+      reset, set, setBy, load, loadBy, connect, unstable_connect, connectWith, useProps, getProps,
       name, enableLog, expiredTime, strictLoading,
       private_actionTypes, private_getState, private_reducer, private_selectorFactory,
       private_getLoading, private_getResults, private_getFetchTimes, private_getError, private_setConfig,
+      // @ts-ignore test that they are not exist
       getLoading, getResults, getFetchTimes, getError, setConfig,
       ...rest
     } = region;
     expect(typeof reset).toBe('function');
     expect(typeof set).toBe('function');
-    expect(typeof setFp).toBe('function');
+    expect(typeof setBy).toBe('function');
     expect(typeof load).toBe('function');
-    expect(typeof loadFp).toBe('function');
+    expect(typeof loadBy).toBe('function');
     expect(typeof connect).toBe('function');
     expect(typeof unstable_connect).toBe('function');
     expect(typeof connectWith).toBe('function');
