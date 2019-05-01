@@ -1,12 +1,7 @@
-import { provide, getProvider, Region } from 'region-core';
-
-const Provider = ({ children }: any) => {
-  console.warn('Provider is deprecated, remove it directly');
-  return children;
-};
+import { Region } from 'region-core';
 
 const region = new Region('region');
 
-export const { set, load, connect, connectWith, useProps } = region;
+export const { set, setBy, reset, load, loadBy, connect, connectWith, useProps, getProps } = region;
 
-export { Region, provide, Provider, getProvider, region };
+export { Region, region };

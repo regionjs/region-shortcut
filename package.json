@@ -21,7 +21,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": ""
+      "pre-commit": "npm run check"
     }
   },
   "jest": {
@@ -29,7 +29,7 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "region-core": "^0.7.4"
+    "region-core": "^8.0.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.11",
