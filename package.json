@@ -11,17 +11,18 @@
   "license": "MIT",
   "author": "Cong Zhang <dancerphil1994@gmail.com>",
   "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "scripts": {
     "build": "rm -rf lib/ && tsc",
-    "check": "npm run build && npm run lint && jest --colors",
-    "codecov": "npm test && codecov",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
-    "prepublishOnly": "npm run check",
-    "test": "jest src --colors --coverage"
+    "test": "jest src --colors --coverage",
+    "test-build": "npm run build && npm run lint && jest --colors",
+    "codecov": "npm test && codecov",
+    "prepublishOnly": "npm run test-build"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run check"
+      "pre-commit": "npm run test-build"
     }
   },
   "jest": {
@@ -29,7 +30,7 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "region-core": "^8.0.0"
+    "region-core": "^8.8.3"
   },
   "devDependencies": {
     "@types/jest": "^24.0.11",
